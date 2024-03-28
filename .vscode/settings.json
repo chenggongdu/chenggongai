@@ -2,6 +2,7 @@
   "npm.packageManager": "pnpm",
   "vetur.format.scriptInitialIndent": true,
   "vetur.format.styleInitialIndent": true,
+  "vetur.validation.template": false,
   "vetur.validation.script": false,
   "eslint.workingDirectories": [
     {

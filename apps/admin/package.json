@@ -14,7 +14,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "@bassist/progress": "^0.2.2",
+    "@bassist/utils": "^0.16.0",
     "ant-design-vue": "4.x",
+    "mitt": "^3.0.1",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
@@ -35,10 +39,11 @@
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^24.0.0",
+    "less": "^4.2.0",
     "npm-run-all2": "^6.1.2",
     "prettier": "^3.0.3",
     "typescript": "^5.3.3",
-    "unocss": "^0.58.7",
+    "unocss": "^0.58.8",
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.1.4",
     "vite-plugin-vue-devtools": "^7.0.18",

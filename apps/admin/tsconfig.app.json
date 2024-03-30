@@ -10,6 +10,7 @@
     "paths": {
       "@/*": ["src/*"],
       "#/*": ["types/*"],
+      "@libs/*": ["src/libs/*"],
       "@hooks/*": ["src/hooks/*"],
       "@cp/*": ["src/components/*"],
       "@views/*": ["src/views/*"]

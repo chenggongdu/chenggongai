@@ -4,6 +4,7 @@
   "vetur.format.styleInitialIndent": true,
   "vetur.validation.template": false,
   "vetur.validation.script": false,
+  "ignoreProjectWarning": "true",
   "eslint.workingDirectories": [
     {
       "mode": "auto"

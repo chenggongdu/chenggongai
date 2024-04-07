@@ -13,14 +13,16 @@
       <li v-for="(item, index) in apps" :title="item.menuName" :key="index">
         <Icon :name="item.menuName" :type="item.menuType" />
         <br />
-        <span class="li_text">{{ item.menuName }}</span>
+        <span class="li_text" @click="handleItemClick(item.menuName)">{{ item.menuName }}</span>
       </li>
     </ul>
   </a-layout-content>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
+import eventBus from '@libs/eventBus'
+
 interface Menu {
   menuName: string
   menuType: string
@@ -31,9 +33,19 @@ const apps = ref<Menu[]>([
     menuType: 'svg'
   }
 ])
+const clickedItem = ref<string | null>(null) // 使用 ref() 创建响应式数据
+
+const handleItemClick = (item: string) => {
+  // 点击事件处理函数，更新 clickedItem 的值为当前点击的项
+  clickedItem.value = item
+}
+
+watch(clickedItem, (currentModuleName) => {
+  eventBus.emit('currentModuleName', currentModuleName)
+})
 </script>
 
-<style lang="less" scoped>  
+<style lang="less" scoped>
 ul {
   list-style: none;
   width: calc(100% - 60px);

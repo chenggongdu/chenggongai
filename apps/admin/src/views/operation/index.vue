@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <Sider />
+    <Sider v-if="true" />
     <a-layout>
       <Header />
       <Content />
